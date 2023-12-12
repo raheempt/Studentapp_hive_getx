@@ -24,9 +24,27 @@ class _StudentListState extends State<StudentList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(leading: IconButton(onPressed: (){
+              Get.bottomSheet(Container(
+              child: Wrap(
+                children: [
+                    ListTile(
+                        leading: Icon(Icons.wb_sunny_outlined),
+                         title: Text('light'),
+                         onTap: ()=>{Get.changeTheme(ThemeData.light())},
+                       ),
+             ListTile(
+                         leading: Icon(Icons.wb_sunny),  
+                         title: Text('dark'),
+                         onTap: ()=>{Get.changeTheme(ThemeData.dark())},
+                       ),
+                ],
+              ),
+              ));
+      }, icon:Icon(Icons.dark_mode_outlined) ),
         backgroundColor: Color.fromARGB(255, 15, 207, 133),
         title: Text('studentapp'),
+        
       ),
       body:Padding(
         padding: const EdgeInsets.all(15.0),
