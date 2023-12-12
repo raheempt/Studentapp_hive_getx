@@ -73,7 +73,7 @@ class _StudentListState extends State<StudentList> {
                   Text('cls:${newBox.cls}'),
                 ],  ),
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Updatestudentlist( index:intex, name:newBox.name,  age:newBox.age,cla: newBox.cls, contact:newBox.contact,email:newBox.email,image: newBox.image,)));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateStudentList( index:intex, name:newBox.name,  age:newBox.age,cla: newBox.cls, contact:newBox.contact,email:newBox.email,image: newBox.image,)));
                 },
                         trailing: IconButton(onPressed: ()async{
                           todoBox.deleteAt(intex).then((value) => 
