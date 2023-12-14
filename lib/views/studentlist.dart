@@ -76,7 +76,7 @@ class _StudentListState extends State<StudentList> {
                   Navigator.push(context, MaterialPageRoute(builder: (context)=>UpdateStudentList( index:intex, name:newBox.name,  age:newBox.age,cla: newBox.cls, contact:newBox.contact,email:newBox.email,image: newBox.image,)));
                 },
                         trailing: IconButton(onPressed: ()async{
-                          todoBox.deleteAt(intex).then((value) => 
+                            todoBox.deleteAt(intex).then((value) => 
                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('...deleted'))));
                         },
                         icon: const Icon(Icons.delete_rounded, color: Colors.red),)

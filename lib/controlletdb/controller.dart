@@ -24,7 +24,7 @@ class StudentModelController extends GetxController {
       selectedImagePath.value = pickedFile.path;
       selectedImageSize.value =
           (File(selectedImagePath.value).lengthSync() / 1024 / 1024)
-                  .toStringAsFixed(2) +
+                  .toStringAsFixed(2) ;
               " Mb";
     } else {
       Get.snackbar('Error', 'No image',
